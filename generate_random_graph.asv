@@ -1,0 +1,44 @@
+% GENERATE 2D GRAPH AND SAVE TO TEXT
+
+clear;
+numNodes = 100;
+numEdges = 1000;
+edgeMaxLength = 20;
+%node: id, x, y
+nodes = zeros(numNodes,3);
+%edge: start-node-id, end-node-id, cost(here, cartesian-distance)
+edges = zeros(numEdges,3);
+
+%define workspace
+x1 = 0;
+x2 = 100;
+y1 = 0;
+y2 = 100;
+rangeX = x2-x1;
+rangeY = y2-y1;
+
+%rand to x, y, id
+randX = @() rand()*rangeX+x1;
+randY = @() rand()*rangeY+y1;
+randId = @() ceil(rand()*numNodes);
+
+for k=1:numNodes
+    nodes(k,:) = [k randX() randY()];
+end
+
+for k=1:numEdges
+    do = true;
+    while(do)
+        n1 = randId();
+        n2 = randId();
+        ndist = norm( nodes(n2,2:3)-nodes(n1,2:3));
+        edges(k,:) = [n1 n2 ndist];
+        do = ndist>=edgeMaxLength;
+    end
+end
+
+csvwrite(['graph_nodes.txt'],nodes)
+csvwrite(['graph_edges.txt'],edges)
+
+
+
