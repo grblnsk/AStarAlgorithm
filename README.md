@@ -1,5 +1,5 @@
 # Matlab Implementation of A* Algorithm
-#### Graph Search With Nodes in 2D Cartesian Space
+### Graph Search With Nodes in 2D Cartesian Space
 
 #### Scripts:
 * generate_random_graph.m - generates a random graph with nodes placed in finite 2D Cartesian Space
