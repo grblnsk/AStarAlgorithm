@@ -32,7 +32,7 @@ Outputs:
 
 References:
 1. Peter E. Hart, Nils J. Nilsson, Bertram Raphael - <cite>[A Formal Basis for the Heuristic Determination of Minimum Cost Paths, 1968][1]</cite>
-2. Brian Moore - <cite>[Data Structures, 2020. Retrieved February 6, 2020 at MATLAB Central File Exchange.][2]</cite>
+2. Brian Moore - <cite>[Data Structures, 2020. Retrieved at MATLAB Central File Exchange on February 6, 2020.][2]</cite>
 3. Michael Otte - Course: <cite>[Motion Planning for Autonomous Systems, Spring 2020][3]</cite>
  
 [1]: https://ieeexplore.ieee.org/document/4082128
